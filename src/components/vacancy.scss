@@ -1,0 +1,39 @@
+.vacancy {
+  position: relative;
+  border-radius: 7px;
+  background: white;
+  padding: 20px;
+  padding-top: 50px;
+  box-shadow: 0 15px 15px 0px rgba(0, 0, 0, 0.1);
+}
+.vacancy__logo-wrapper {
+  position: absolute;
+  bottom: 100%;
+  transform: translateY(50%);
+}
+.vacancy__row {
+  display: flex;
+}
+.special-info__item {
+  position: relative;
+  padding: 0 10px 0 15px;
+  &::before {
+    position: absolute;
+    content: "•";
+    left: 0;
+    top: 50%;
+    transform: translateY(-44%);
+  }
+  &:nth-child(1) {
+    padding-left: 0;
+    &::before {
+      display: none;
+    }
+  }
+}
+.vacancy__employer {
+  text-transform: capitalize;
+}
+.vacancy__title {
+  text-transform: capitalize;
+}

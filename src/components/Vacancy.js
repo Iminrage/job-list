@@ -45,14 +45,20 @@ export default (props) => {
                 index + idx.toString().split("").reverse().join("")
               );
               return (
-                <button className="vacancy__tag" key={subIndex}>
+                <button
+                  className="vacancy__tag"
+                  key={subIndex}
+                  onClick={() => props.click(el)}>
                   {el}
                 </button>
               );
             });
           } else if (typeof tag === "string") {
             return (
-              <button className="vacancy__tag" key={index}>
+              <button
+                className="vacancy__tag"
+                key={index}
+                onClick={() => props.click(tag)}>
                 {tag}
               </button>
             );

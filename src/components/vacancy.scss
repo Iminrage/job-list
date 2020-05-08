@@ -1,18 +1,26 @@
 .vacancy {
   position: relative;
-  border-radius: 7px;
+  border-radius: 5px;
   background: white;
   padding: 20px;
   padding-top: 50px;
   box-shadow: 0 15px 15px 0px rgba(0, 0, 0, 0.1);
+}
+.vacancy--feat {
+  box-shadow: inset 8px 0px 0px -1px hsl(180, 29%, 50%);
 }
 .vacancy__logo-wrapper {
   position: absolute;
   bottom: 100%;
   transform: translateY(50%);
 }
+.vacancy__description {
+  padding-bottom: 22px;
+  border-bottom: 1px solid hsl(180, 8%, 52%);
+}
 .vacancy__row {
   display: flex;
+  align-items: center;
 }
 .special-info__item {
   position: relative;
@@ -33,7 +41,44 @@
 }
 .vacancy__employer {
   text-transform: capitalize;
+  font-size: 15px;
+  padding-right: 10px;
+  font-weight: 700;
+  color: hsl(180, 29%, 50%);
 }
 .vacancy__title {
   text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 700;
+}
+.vacancy__labels {
+  display: flex;
+  align-items: baseline;
+}
+.label {
+  display: none;
+  padding: 10px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 20px;
+  font-family: "Spartan", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 0.8;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+}
+.label--new {
+  background: hsl(180, 29%, 50%);
+}
+.label--feat {
+  background: black;
+}
+.label--active {
+  display: block;
+}
+.special-info__item {
+  color: hsl(180, 8%, 52%);
+  font-size: 12px;
 }

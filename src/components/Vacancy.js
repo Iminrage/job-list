@@ -5,7 +5,7 @@ export default (props) => {
     <div className={`vacancy ${props.feat && "vacancy--feat"}`}>
       <div className="vacancy__logo-wrapper">
         <img
-          src={require(`../img/${props.logo}.svg`)}
+          src={require(`${props.logo}`)}
           alt={props.logo}
           className="vacancy__logo-wrapper img-responsive"
         />
@@ -36,6 +36,20 @@ export default (props) => {
             {props.residence}
           </div>
         </div>
+      </div>
+      <div className="">
+        {props.tags.map((tag, index) => {
+          if (Array.isArray(tag)) {
+            return tag.map((el, idx) => {
+              const subIndex = +(
+                index + idx.toString().split("").reverse().join("")
+              );
+              return <button key={subIndex}>{el}</button>;
+            });
+          } else if (typeof tag === "string") {
+            return <button key={index}>{tag}</button>;
+          }
+        })}
       </div>
     </div>
   );

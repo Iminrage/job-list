@@ -22,6 +22,7 @@
 .vacancy__row {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 .special-info__item {
   position: relative;
@@ -43,7 +44,7 @@
 .vacancy__employer {
   text-transform: capitalize;
   font-size: 15px;
-  padding-right: 10px;
+  padding-right: 20px;
   font-weight: 700;
   color: hsl(180, 29%, 50%);
 }
@@ -55,11 +56,12 @@
 .vacancy__labels {
   display: flex;
   align-items: baseline;
+  padding: 10px 0;
 }
 .label {
   display: none;
   padding: 10px;
-  margin-left: 10px;
+  margin-right: 10px;
   border: none;
   border-radius: 20px;
   font-family: "Spartan", sans-serif;
@@ -82,4 +84,18 @@
 .special-info__item {
   color: hsl(180, 8%, 52%);
   font-size: 12px;
+}
+.vacancy__tag {
+  border: none;
+  border-radius: 4px;
+  padding: 8px 5px;
+  margin: 10px 0 0;
+  margin-right: 10px;
+  background: hsl(180, 31%, 95%);
+  font-family: "Spartan", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  color: hsl(180, 29%, 50%);
+  cursor: pointer;
 }

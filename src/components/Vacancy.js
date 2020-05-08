@@ -44,10 +44,18 @@ export default (props) => {
               const subIndex = +(
                 index + idx.toString().split("").reverse().join("")
               );
-              return <button key={subIndex}>{el}</button>;
+              return (
+                <button className="vacancy__tag" key={subIndex}>
+                  {el}
+                </button>
+              );
             });
           } else if (typeof tag === "string") {
-            return <button key={index}>{tag}</button>;
+            return (
+              <button className="vacancy__tag" key={index}>
+                {tag}
+              </button>
+            );
           }
         })}
       </div>

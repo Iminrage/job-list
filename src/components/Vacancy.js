@@ -37,7 +37,7 @@ export default (props) => {
           </div>
         </div>
       </div>
-      <div className="">
+      <div className="vacancy__tags">
         {props.tags.map((tag, index) => {
           if (Array.isArray(tag)) {
             return tag.map((el, idx) => {

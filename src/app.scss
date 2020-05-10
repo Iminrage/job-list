@@ -6,9 +6,9 @@ body,
 }
 
 .app {
-  position: relative;
   min-height: 100vh;
   padding-top: 250px;
+  padding-bottom: 100px;
   font-family: "Spartan", sans-serif;
   background: hsl(180, 52%, 96%);
   &::before {
@@ -18,13 +18,26 @@ body,
     left: 0;
     width: 100%;
     height: 150px;
-    background: url("./components/images/bg-header-desktop.svg") right top /
-        auto no-repeat,
+    background: url("./components/images/bg-header-mobile.svg") left bottom /
+        cover no-repeat,
       hsl(180, 29%, 50%);
+    @media screen and (min-width: 450px) {
+      background: url("./components/images/bg-header-desktop.svg") right bottom /
+          cover no-repeat,
+        hsl(180, 29%, 50%);
+    }
   }
 }
 .container {
+  position: relative;
   max-width: 1440px;
   padding: 0 15px;
   margin: 0 auto;
+}
+.vacancies {
+  transition: 0.3s all;
+}
+.filter-wrapper {
+  margin-top: -98px;
+  transform: translateY(-50%);
 }

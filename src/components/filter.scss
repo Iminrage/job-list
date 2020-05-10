@@ -1,0 +1,77 @@
+.filter {
+  position: relative;
+  padding: 30px 20px;
+  padding-right: 80px;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 15px 15px 0px rgba(0, 0, 0, 0.1);
+  @media screen and (min-width: 768px) {
+    animation: fadeIn 0.3s both;
+  }
+}
+.filter__btn {
+  position: relative;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  padding: 8px 5px;
+  margin: 10px 0 0;
+  margin-right: 45px;
+  background: hsl(180, 31%, 95%);
+  font-family: "Spartan", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  color: hsl(180, 29%, 50%);
+  cursor: pointer;
+  &:hover {
+    &::before {
+      background: hsl(180, 14%, 20%);
+    }
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    left: 100%;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    background: hsl(180, 29%, 50%);
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    left: calc(100% + 7.5px);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background: url(./images/icon-remove.svg) 0 0 / contain no-repeat;
+  }
+}
+.filter__clear {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  font-family: "Spartan", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  color: hsl(180, 29%, 50%);
+  background: transparent;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "job-list",
-  "homepage": "http://iminrage.github.io/joblist",
+  "homepage": "https://iminrage.github.io/job-list/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
